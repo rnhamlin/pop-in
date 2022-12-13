@@ -1,0 +1,25 @@
+{
+  "name": "pop-in",
+  "version": "1.0.0",
+  "description": "Module 18 Challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnhamlin/pop-in.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnhamlin/pop-in/issues"
+  },
+  "homepage": "https://github.com/rnhamlin/pop-in#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0"
+  }
+}
