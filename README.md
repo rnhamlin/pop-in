@@ -27,11 +27,12 @@ Why not pop in? Pop in for a cuppa, pop in for a chat. Pop-In is a social media 
 2. Run "node server"
 3. Open Insomnia
 4. Test routes:
-   "GET,"
-   "POST,"
-   "PUT,"
-   "DELETE."
-   Note: Run "GET" twice to see "get all" and "get one."
+
+- "GET,"
+- "POST,"
+- "PUT,"
+- "DELETE."
+- Note: Run "GET" twice, once without ID endpoint and once with ID endpoint, to see "get all" and "get one."
 
 ### Packages
 
