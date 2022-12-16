@@ -1,6 +1,6 @@
-const { timeSince } = require("bson");
 const { Schema, model } = require("mongoose");
 const ReactionSchema = require("./Reaction.js");
+const { timeSince } = require("bson");
 
 // thought schema, broken down into multiple objects:
 
