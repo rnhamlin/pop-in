@@ -1,7 +1,7 @@
 // user controller
 
 //import model
-const { Thought, User } = require("../models");
+const { Thought, User } = require("../models").default;
 
 // get all users
 getAllUsers(req, res);

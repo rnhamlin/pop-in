@@ -1,7 +1,7 @@
 //make controllers before routes.
 
 //import model
-const { Thought, User } = require("../models");
+const { Thought, User } = require("../models").default;
 
 //thought controller: an array of all the thought-related functions.
 const thoughtController = {
@@ -20,10 +20,13 @@ const thoughtController = {
 
   //get one thought
   findOneThoughtById({ params }, res) {
-    Thoughts.findOne({_id: params.id}).select("-__v").then(dbThoughtData => res.json(dbThoughtData)).catch(err => {
-      console.log(err);
-      res.sendStatus(400);
-    });
+    Thoughts.findOne({ _id: params.id })
+      .select("-__v")
+      .then((dbThoughtData) => res.json(dbThoughtData))
+      .catch((err) => {
+        console.log(err);
+        res.sendStatus(400);
+      });
   },
 
   //POST - create comment to user
@@ -50,17 +53,20 @@ const thoughtController = {
   },
 
   // PUT - modify/update thought by ID
-updateThought({params, body}, res) {
-  Thought.findOneAndUpdate({ _id: params.id}, body, {
-    new: true,
-    runValidators: true
-  }).then(dbThoughtData => {
-    if (!dbThoughtData) {res.status(404).json({message: "No thought found with this id!"});
-    return;
-  }
-    res.json(dbThoughtData);
-  }).catch(err => res.json(err));
-},
+  updateThought({ params, body }, res) {
+    Thought.findOneAndUpdate({ _id: params.id }, body, {
+      new: true,
+      runValidators: true,
+    })
+      .then((dbThoughtData) => {
+        if (!dbThoughtData) {
+          res.status(404).json({ message: "No thought found with this id!" });
+          return;
+        }
+        res.json(dbThoughtData);
+      })
+      .catch((err) => res.json(err));
+  },
 
   //DELETE - remove comment
   removeThought({ params }, res) {
@@ -73,7 +79,7 @@ updateThought({params, body}, res) {
         res.json(dbUserData);
       })
       .catch((err) => res.json(err));
-  }
+  },
 };
 
 module.exports = thoughtController;
