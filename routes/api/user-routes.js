@@ -1,28 +1,16 @@
 // call on functions created in the Controllers; those are the "actual" routes. Controllers manage what's happening to data once the route is used.
 const router = require("express").Router();
-const {/*function names from controller list here*/} = require("../../controllers/user-controller")
+// list the functions in {} below to create the object to call on in the router.
+const {
+  getAllUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+} = require("../../controllers/user-controller");
 
+// /api/user
+router.use("/").get(getAllUsers).put(updateUser);
 
-router.use("/").get(findallThoughts)
-
-
-
-
-
-
-//This is all wrong. Functions in Controllers only. The module was wroooooong. :/
-// function getUser() {
-//     // get user id.
-//     const searchParams = new URLSearchParams(document.location.search.substring(1));
-//     const userId = searchParams.get('id');
-  
-//     // get userInfo
-//     fetch(`/api/users/${UserId}`)
-//       .then(response => {
-//         console.log(response);
-//         return response.json();
-//       })
-//       .then(printUser);
-//   };
-
-  
+// /api/user/:id
+router.use("/:id").get(getUserById).post(createUser).delete(deleteUser);

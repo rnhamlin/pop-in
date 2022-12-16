@@ -11,8 +11,9 @@ const {
 //see below one simplified way and one longhand way of writing this out
 
 // /api/thoughts
-router.use("/").get(findAllThoughts).put(updateThought).delete(removeThought);
+router.use("/").get(findAllThoughts).post(addThought);
 
 // /api/thoughts/:id
-router.use("/").get(findOneThoughtById);
-router.use("/:id").post(addThought);
+router.use("/:id").get(findOneThoughtById);
+router.use("/:id").put(updateThought);
+router.use("/:id").delete(removeThought);

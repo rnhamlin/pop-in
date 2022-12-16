@@ -1,8 +1,6 @@
-const { Timestamp } = require("bson");
+const { timeSince } = require("bson");
 const { Schema, model } = require("mongoose");
 const ReactionSchema = require("./Reaction.js");
-
-// ({driver: mongoose.ObjectId})
 
 // thought schema, broken down into multiple objects:
 
