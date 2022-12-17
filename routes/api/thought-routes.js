@@ -17,3 +17,5 @@ router.use("/").get(findAllThoughts).post(addThought);
 router.use("/:id").get(findOneThoughtById);
 router.use("/:id").put(updateThought);
 router.use("/:id").delete(removeThought);
+
+module.exports = router;
