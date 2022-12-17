@@ -13,13 +13,13 @@ const {
 } = require("../../controllers/user-controller");
 
 // /api/user
-router.use("/").get(getAllUsers).put(updateUser);
+router.use("/").get(getAllUsers).post(createUser);
 
 // /api/user/:id
 router
   .use("/:id")
   .get(getUserById)
-  .post(createUser)
+  .put(updateUser)
   .delete(deleteUser)
   .post(addFriend)
   .delete(removeFriend);
