@@ -11,11 +11,11 @@ const {
 //see below one simplified way and one longhand way of writing this out
 
 // /api/thoughts
-router.use("/").get(findAllThoughts).post(addThought);
+router.route("/").get(findAllThoughts).post(addThought);
 
 // /api/thoughts/:id
-router.use("/:id").get(findOneThoughtById);
-router.use("/:id").put(updateThought);
-router.use("/:id").delete(removeThought);
+router.route("/:id").get(findOneThoughtById);
+router.route("/:id").put(updateThought);
+router.route("/:id").delete(removeThought);
 
 module.exports = router;

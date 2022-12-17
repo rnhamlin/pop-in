@@ -2,8 +2,8 @@
 
 //import model
 //const { Thought, User } = require("../models").default;
-const { Thought } = require("../models/Thought.js");
-const { User } = require("../models/User.js");
+const { Thought, User } = require("../models/");
+
 
 //thought controller: an array of all the thought-related functions.
 const thoughtController = {
@@ -24,7 +24,7 @@ const thoughtController = {
 
   //get one thought
   findOneThoughtById({ params }, res) {
-    Thoughts.findOne({ _id: params.id })
+    Thought.findOne({ _id: params.id })
       .select("-__v")
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => {

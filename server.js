@@ -1,13 +1,19 @@
 const express = require("express");
-const mongoose = require("mongoose");
-//const routes = require("./routes");
+const db = require("./config/connection");
+const routes = require("./routes");
 
-const app = express();
 const PORT = process.env.port || 3001;
+const app = express();
 
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.json());
+app.use(routes);
+
+db.once("open", () => {
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+  });
+});
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/pop-in",
@@ -18,8 +24,6 @@ mongoose.connect(
 );
 
 // Use this to log mongo queries being executed!
-mongoose.set("debug", true);
+// mongoose.set("debug", true);
 
-app.use(require("./routes"));
-
-app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
+// app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
