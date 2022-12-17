@@ -1,5 +1,6 @@
 const { Schema, model } = require("mongoose");
 
+
 // User Schema goes here
 const UserSchema = new Schema(
   {
@@ -18,7 +19,7 @@ const UserSchema = new Schema(
         "Must match a valid email address.",
       ],
     },
-    tags: { type: [String], index: true },
+    tags: { type: [String], index: true},
     thoughts: [
       {
         type: Schema.Types.ObjectId,
@@ -47,7 +48,5 @@ UserSchema.virtual("friendCount").get(function () {
 });
 //will need for thought.js, but not reaction.js
 const User = model("User", UserSchema);
-
-
 
 module.exports = User;

@@ -44,8 +44,3 @@ Why not pop in? Pop in for a cuppa, pop in for a chat. Pop-In is a social media 
 ![Screenshot](pop-in-ss.png)
 
 ### Demo Video(s)
-
-
-### Contributers
-
-Created by Renee Hamlin, with grateful acknowledgement to the assistance and support of tutors Sean New and Jacob Carver.

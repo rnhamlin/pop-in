@@ -4,7 +4,6 @@
   "description": "Module 18 Challenge",
   "main": "server.js",
   "scripts": {
-    "test": "Insomnia",
     "start": "node server.js"
   },
   "repository": {
@@ -20,6 +19,6 @@
   "homepage": "https://github.com/rnhamlin/pop-in#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^6.8.0"
+    "mongoose": "^6.7.0"
   }
 }

@@ -1,9 +1,7 @@
 //make controllers before routes.
 
 //import model
-//const { Thought, User } = require("../models").default;
 const { Thought, User } = require("../models/");
-
 
 //thought controller: an array of all the thought-related functions.
 const thoughtController = {
