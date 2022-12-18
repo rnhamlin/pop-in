@@ -13,7 +13,7 @@ const {
 } = require("../../controllers/user-controller");
 
 // /api/user
-router.use("/").get(getAllUsers).post(createUser);
+router.route("/").get(getAllUsers).post(createUser);
 
 // /api/user/:id
 router
