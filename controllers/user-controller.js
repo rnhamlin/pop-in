@@ -1,7 +1,8 @@
 // user controller
 
 //import model
-const { User } = require("../models/User");
+//const { User } = require("../models/User");
+const { User } = require("../models");
 
 const userController = {
   // get all users

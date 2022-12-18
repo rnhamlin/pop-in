@@ -45,18 +45,18 @@ const ThoughtSchema = new Schema(
     ],
   },
   // Setup for virtual
-  {
-    toJSON: {
-      virtuals: true,
-    },
-    id: false,
-  }
+  // {
+  //   toJSON: {
+  //     virtuals: true,
+  //   },
+  //   id: false,
+  // }
 );
 
 // reactionCount virtual goes here to retrieve the length of the thought's reactions array field on query.
-ThoughtSchema.virtual("reactionCount", ThoughtSchema).get(function () {
-  return this.reactions.length;
-});
+// ThoughtSchema.virtual("reactionCount", ThoughtSchema).get(function () {
+//   return this.reactions.length;
+// });
 const Thought = model("Thought", ThoughtSchema);
 
 // Export code goes here

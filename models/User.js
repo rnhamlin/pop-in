@@ -18,7 +18,6 @@ const UserSchema = new Schema(
         "Must match a valid email address.",
       ],
     },
-    tags: { type: [String], index: true },
     thoughts: [
       {
         type: Schema.Types.ObjectId,
@@ -33,18 +32,18 @@ const UserSchema = new Schema(
     ],
   },
   // Setup for the virtual.
-  {
-    toJSON: {
-      virtuals: true,
-    },
-    id: false,
-  }
+  // {
+  //   toJSON: {
+  //     virtuals: true,
+  //   },
+  //   id: false,
+  // }
 );
 
 // Virtual that retrieves length of user's friends array field on query.
-UserSchema.virtual("friendCount").get(function () {
-  return this.friends.length;
-});
+// UserSchema.virtual("friendCount").get(function () {
+//   return this.friends.length;
+// });
 //will need for thought.js, but not reaction.js
 const User = model("User", UserSchema);
 
