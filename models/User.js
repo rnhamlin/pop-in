@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
 
-
 // User Schema goes here
 const UserSchema = new Schema(
   {
@@ -19,7 +18,7 @@ const UserSchema = new Schema(
         "Must match a valid email address.",
       ],
     },
-    tags: { type: [String], index: true},
+    tags: { type: [String], index: true },
     thoughts: [
       {
         type: Schema.Types.ObjectId,

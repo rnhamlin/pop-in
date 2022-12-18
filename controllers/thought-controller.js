@@ -9,8 +9,6 @@ const thoughtController = {
   //.populate will come in later, when we are wondering why our thoughts aren't populating
   findAllThoughts(req, res) {
     Thought.find()
-      .populate({ path: "user", select: "-__v" })
-      .populate({ path: "user", select: "-__v" })
       .select("-__v")
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => {
