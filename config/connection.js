@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 // connects mongoose to mongoDB; connects to my database set up in mongoDB.(Uses name of the DB I choose)
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/socialMediadb",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/socialMediadb",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
