@@ -42,6 +42,8 @@ Why not pop in? Pop in for a cuppa, pop in for a chat. Pop-In is a social media 
 ### Screenshot
 
 ![Screenshot](pop-in-ss.png)
+![Screenshot](ss-2.png)
 
 ### Demo Video(s)
-1. POST user demonstration: https://watch.screencastify.com/v/J1jIswNovU2EaWKoggRh
+
+User demonstration: https://watch.screencastify.com/v/J1jIswNovU2EaWKoggRh
